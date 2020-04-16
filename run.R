@@ -1,0 +1,11 @@
+#Calls R functions and executes them
+source("./extractData.R")
+source("./plot1.R")
+source("./plot2.R")
+source("./plot3.R")
+source("./plot4.R")
+extractData()
+generatePlot1()
+generatePlot2()
+generatePlot3()
+generatePlot4()
