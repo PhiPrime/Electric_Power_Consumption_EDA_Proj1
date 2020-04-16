@@ -23,7 +23,9 @@ This project includes the following files:
 * *data/condencedData.csv* - a condenced version of the dataset that only has the two dates that are to be evaluated  
 * *Goal_Output_Images* - The four images that are to be reproduced, they were forked from: https://github.com/rdpeng/ExData_Plotting1  
 * *CodeBook.md* - a codebook that explains the nine variables in *condencedData.csv*  
+* *extractData.R* - code that loads in the zip file and extracts data for the two days in question.
 * *LICENSE* - a standard GNU GENERAL PUBLIC LICENSE V3  
 * *plot[X].png* - [X] ranges from 1 to 4 and mirror the respective Goal Output Images  
 * *plot[X].R* - R code that generates the respective [X] png file  
 * *README.md* - This document  
+* *run.R* - calls to other R functions and generates the plots  
