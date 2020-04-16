@@ -10,5 +10,3 @@ generatePlot1 <- function() {
              main = "Global Active Power")
         dev.off()
 }
-
-generatePlot1()

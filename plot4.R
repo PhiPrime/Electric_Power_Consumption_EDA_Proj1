@@ -4,10 +4,12 @@
 #3) Energy sub metering
 #4) Global_reactive_power
 generatePlot4 <- function() {
+        library(lubridate)
+        library(dplyr)
         data <- read.csv("./data/condencedData.csv")
         data <- mutate(data, Date_Time = as.POSIXct(strptime(
                 paste(data$Date, data$Time),
-                format = "%Y-%m-%d %H:%M:%S")))
+                format = "%d/%m/%Y %H:%M:%S")))
 
         png(file = "./plot4.png",
             width = 480,
@@ -49,5 +51,3 @@ generatePlot4 <- function() {
 
         dev.off()
 }
-
-generatePlot4()

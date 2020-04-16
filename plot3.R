@@ -1,9 +1,11 @@
 #Line plot of Date_Time vs Energy sub metering
 generatePlot3 <- function() {
+        library(lubridate)
+        library(dplyr)
         data <- read.csv("./data/condencedData.csv")
         data <- mutate(data, Date_Time = as.POSIXct(strptime(
                 paste(data$Date, data$Time),
-                format = "%Y-%m-%d %H:%M:%S")))
+                format = "%d/%m/%Y %H:%M:%S")))
         png(file = "./plot3.png",
             width = 480,
             height = 480)
@@ -19,5 +21,3 @@ generatePlot3 <- function() {
                legend = grep("^[Sub]", names(data), value = TRUE))
         dev.off()
 }
-
-generatePlot3()
